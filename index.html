@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	
+	<title>Frontend Mentor | Profile card component</title>
+
+	<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+	<style>
+		.attribution { font-size: 11px; text-align: center; }
+		.attribution a { color: hsl(228, 45%, 44%); }
+		html{
+			box-sizing: border-box;            
+		}    
+		html,body{
+			height: 100%;   
+		}    
+		body{    
+			display: flex;
+			flex-direction: column;
+			justify-content: center; 
+			font-family: 'Kumbh Sans', sans-serif;
+			background-color:  hsl(185, 75%, 39%);		
+			overflow: hidden;      
+			gap: 10px;   
+		}         
+		*,*::before,*::after{
+			text-align: center;
+			box-sizing: inherit;
+			margin: 0;
+			padding: 0;
+		} 
+		.image-perfil{
+			border: 8px solid #fff;
+			border-radius: 50%;
+			position: relative;
+			top: -65px;
+			height: 130px;
+			margin-bottom: -65px;
+		}
+		.image-bg,.image-bg img{			
+			width: 100%;
+		}
+		.card{
+			width: 90%;
+			max-width: 400px;
+			margin: 0 auto;
+			border-radius: 20px;
+			overflow: hidden;
+			background-color: #fff;
+			z-index: 2;
+		}
+		.name{
+			margin: 15px auto;
+			color: hsl(229, 23%, 23%);
+		}
+		.age, .city{
+			color: hsl(227, 10%, 46%);
+			font-weight: 400;
+		}
+		.stats{
+			margin-top: 35px;
+			border-top: 1px solid hsla(0, 0%, 59%, 0.315);
+			padding: 35px 40px;
+			display: flex;
+			gap: 15px;
+			flex-direction: column;
+			justify-content: space-around;
+		}		
+		.stat{
+			display: flex;
+			color:hsl(229, 23%, 23%) ;
+			flex-direction: column;
+			font-weight: bold;
+			font-size: 22px;
+			gap: 2px;
+		}
+		@media (min-width: 375px) {
+			.stats{
+				flex-direction: row ;
+			}
+		}
+		.nameStat{
+			font-weight: 400;
+			font-size: 14px;
+			color: hsl(0, 0%, 59%);
+		}
+		.img-bottom{
+			background-image: url('./images/bg-pattern-bottom.svg');
+			background-position: bottom right;	
+			bottom: -350px;
+			right: -450px;			
+		}
+		.img{
+			background-size: 700px;
+			position: absolute;
+			background-repeat: no-repeat;
+			height: 700px;
+			width: 700px;
+		}
+		.img-top{
+			background-image: url('./images/bg-pattern-top.svg');
+			top: -400px;
+			left: -450px;		
+		}
+		@media (min-width: 928px) {
+			.img-bottom{
+				background-image: url('./images/bg-pattern-bottom.svg');
+				background-position: bottom right;	
+				bottom: -600px;
+				right: -300px;	
+			}	
+			.img-top{
+				top: -450px;
+				left: -400px;	
+			}
+			.img{
+				background-size: 1000px;
+				height: 1000px;
+				width: 1000px;
+			}	
+		
+		}
+	</style>
+</head>
+<body >	
+	<div class="img-bottom img"></div>
+	<div class="img-top img"></div>
+	<main class="card">
+		<section class="image-bg">
+			<img src="./images/bg-pattern-card.svg" alt="">
+		</section>
+		<section>
+			<img class="image-perfil" src="./images/image-victor.jpg" alt="">
+			<div class="content">
+				<h2 class="name">Victor Crest <span class="age">26</span></h2>
+				<p class="city">London</p>
+				<div class="stats">
+					<p class="stat">
+						80K
+						<span class="nameStat">Followers</span>
+					</p>
+					<p class="stat">
+						803K
+						<span class="nameStat">Likes</span>			
+					</p>
+					<p class="stat">			
+						1.4K
+						<span class="nameStat">Photos</span>
+					</p>
+				</div>
+			</div>
+		</section>	
+	</main>	
+	
+	<div class="attribution">
+		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+		Coded by <a href="#">Hansel Chavez Garcia</a>.
+	</div>
+</body>
+</html>
